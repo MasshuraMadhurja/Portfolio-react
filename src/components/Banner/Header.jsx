@@ -4,14 +4,21 @@ import styled from 'styled-components';
 import { GiCandleFlame } from "react-icons/gi";
 import logoimg from "../../assets/logo-portfolio.png";
 import { Link } from "react-scroll";
-
+import Bars from "../../assets/bars.png";
 
 
     const Header = () => {
         const [bar, setBar] = useState(false);
+        const mobile = window.innerWidth <= 768 ? true : false;
+        const handleLinkClick = () => {
+          // Close the menu when a link is clicked
+          setBar(false);
+        };
+      
       
         return (
           <Container bar={bar}>
+           
             <Logo>
               <img src={logoimg} alt="" className="logo" />
               <h1>Portfolio</h1>
@@ -19,27 +26,28 @@ import { Link } from "react-scroll";
             <Nav bar={bar}>
               {/* Use Link instead of anchor tags */}
               <span>
-                <Link to="home">Home</Link>
+                <Link to="home" onClick={handleLinkClick}>Home</Link>
               </span>
               <span>
-                <Link to="service">Services</Link>
+                <Link to="service" onClick={handleLinkClick}>Services</Link>
               </span>
               <span>
-                <Link to="project">Projects</Link>
+                <Link to="project" onClick={handleLinkClick}>Projects</Link>
               </span>
               <span>
-                <Link to="skills">Skills</Link>
+                <Link to="skills" onClick={handleLinkClick}>Skills</Link>
               </span>
               <span>
-                <Link to="journey">My Journey</Link>
+                <Link to="journey" onClick={handleLinkClick}>My Journey</Link>
               </span>
               <span>
-                <Link to="footer">Contact</Link>
+                <Link to="footer" onClick={handleLinkClick}>Contact</Link>
               </span>
             </Nav>
             <div onClick={() => setBar(!bar)} className="bars">
               <div className="bar"></div>
             </div>
+      
           </Container>
       
   )
@@ -76,9 +84,10 @@ const Container = styled.div`
             z-index: 100;
            
             .bar{
-                position: absolute;
-                width: 100%;
+                position: fixed;
+                width: 10%;
                 height: 2px;
+                right:3%;
                 background-color: ${props => props.bar ? "transparent" : "#fff"};
                 transition: all 400ms ease-in-out;
                 :before, :after{
