@@ -1,0 +1,9 @@
+Hello I'am
+Masshura Mayasir Madhurja
+Front-end developer
+
+## colors
+green : #01be96
+
+name font family 
+font-family: 'Secular One', sans-serif;
