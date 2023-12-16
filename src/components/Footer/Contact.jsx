@@ -11,10 +11,14 @@ import { MdAlternateEmail } from "react-icons/md";
 export const Contact = () => {
   const form = useRef(null);
 
+const serviceId = process.env.REACT_APP_SERVICE_ID;
+const templateId = process.env.REACT_APP_TEMPLATE_ID;
+const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+
   const sendEmail = (e) => {
     e.preventDefault();
     console.log(form.current);
-    emailjs.sendForm('service_e65go5p', 'template_g6gysuu', form.current, 'zoLrrBv8F8kwL-9-S')
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
       .then((result) => {
         console.log(result.text);
       }, (error) => {
