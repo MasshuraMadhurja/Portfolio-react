@@ -34,19 +34,19 @@ export const Contact = () => {
             <span>
               <CgProfile />
             </span>
-            <input type="text" name="from_name" placeholder="Your Name..." />
+            <input type="text" name="from_name" placeholder="Your Name..." required/>
           </div>
           <div className="email">
             <span>
               <MdAlternateEmail />
             </span>
-            <input type="email" name="from_email" placeholder="Your Email..."/>
+            <input type="email" name="from_email" placeholder="Your Email..."required/>
           </div>
           <div className="message">
             <span className="messageIcon">
               <FiMail />
             </span>
-            <textarea cols="30" rows="10" name="message"  placeholder="Message..." />
+            <textarea cols="30" rows="10" name="message"  placeholder="Message..." required />
           </div>
           <input type="submit" value="Send" className="button" />
         </form>

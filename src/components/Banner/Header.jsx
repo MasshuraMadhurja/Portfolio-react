@@ -2,31 +2,46 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
 import { GiCandleFlame } from "react-icons/gi";
-import logoimg from "../../assets/logo-portfolio.png"
+import logoimg from "../../assets/logo-portfolio.png";
+import { Link } from "react-scroll";
 
-const Header = () => {
-    const [bar, setBar] = useState(false);
-  return (
-    <Container bar={bar}>
-        <Logo>
-            <img src={logoimg} alt="" className="logo" />
-            {/* <span className='green'><GiCandleFlame/></span> */}
-            <h1>Portfolio</h1>
-        </Logo>
-        <Nav bar={bar}>
-            <span><a href="#home">Home</a></span>
-            <span><a href="#service">Services</a></span>
-            <span><a href="#project">Projects</a></span>
-            <span><a href="#skills">Skills</a></span>
-            <span><a href="#journey">My Journey</a></span>
-            <span><a href="#footer">Contact</a></span>
-        </Nav>
-        <div
-        onClick={() => setBar(!bar)}
-        className="bars">
-            <div className="bar"></div>
-        </div>
-    </Container>
+
+
+    const Header = () => {
+        const [bar, setBar] = useState(false);
+      
+        return (
+          <Container bar={bar}>
+            <Logo>
+              <img src={logoimg} alt="" className="logo" />
+              <h1>Portfolio</h1>
+            </Logo>
+            <Nav bar={bar}>
+              {/* Use Link instead of anchor tags */}
+              <span>
+                <Link to="home">Home</Link>
+              </span>
+              <span>
+                <Link to="service">Services</Link>
+              </span>
+              <span>
+                <Link to="project">Projects</Link>
+              </span>
+              <span>
+                <Link to="skills">Skills</Link>
+              </span>
+              <span>
+                <Link to="journey">My Journey</Link>
+              </span>
+              <span>
+                <Link to="footer">Contact</Link>
+              </span>
+            </Nav>
+            <div onClick={() => setBar(!bar)} className="bars">
+              <div className="bar"></div>
+            </div>
+          </Container>
+      
   )
 }
 
