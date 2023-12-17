@@ -15,12 +15,12 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.21.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "react-scroll": "^1.9.0",
     "react-slick": "^0.29.0",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4",
-    "webpack": "^5.89.0"
+    "@babel/plugin-proposal-private-property-in-object": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,8 +45,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.0.0"
   }
 }
