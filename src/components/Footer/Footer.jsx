@@ -38,7 +38,7 @@ const Footer = () => {
               <FiPhoneCall />
             </span>
             <Slide direction="left">
-              <a href="tel:+8801872490405">+8801872490405</a>
+              <a href="tel:+8801872">+8801872******</a>
             </Slide>
           </div>
           <div>
