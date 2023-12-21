@@ -8,6 +8,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";
 import profile from "../../assets/profile.png"
 import { PiDownloadSimpleBold } from "react-icons/pi";
+import CV from '../../assets/Cv_Madhurja.pdf';;
 
 const ProfComponent = () => {
   return (
@@ -27,7 +28,7 @@ const ProfComponent = () => {
 <p>
   I am open to new collaborations or work where I can contribute and grow.
 </p>  
-  <button> <a href="/assets/files/Cv_Madhurja___.pdf" class="resume" download="Cv_Madhurja___.pdf">
+  <button> <a href={CV} class="resume" download="Cv_Madhurja.pdf">
             <strong>Resume </strong><PiDownloadSimpleBold /></a></button>
           <Social>
             <p>Check out my</p>
