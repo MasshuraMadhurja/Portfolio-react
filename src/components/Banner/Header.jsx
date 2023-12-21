@@ -164,9 +164,13 @@ const Nav = styled.div`
             :hover:before{
                 transform: scale(1);
                 transform-origin: left;
+                cursor: pointer;
+
             }
             :hover{
                 opacity: 0.7;
+                cursor: pointer;
+
             }
         }
     }
